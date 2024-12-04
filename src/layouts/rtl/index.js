@@ -21,7 +21,7 @@ export default function Dashboard(props) {
     return window.location.pathname !== '/rtl/full-screen-maps';
   };
   const getActiveRoute = (routes) => {
-    let activeRoute = 'Default Brand Text';
+    let activeRoute = 'Esto es un Texto por Default';
     for (let i = 0; i < routes.length; i++) {
       if (routes[i].collapse) {
         let collapseActiveRoute = getActiveRoute(routes[i].items);
@@ -113,7 +113,7 @@ export default function Dashboard(props) {
           setToggleSidebar,
         }}
       >
-        <Sidebar routes={routes} display="none" {...rest} />
+        <Sidebar routes={routes} display="none" bg="#A27068" color="#C7B58F" {...rest} />
         <Box
           float="left"
           minHeight="100vh"
@@ -132,7 +132,7 @@ export default function Dashboard(props) {
             <Box>
               <Navbar
                 onOpen={onOpen}
-                logoText={'Horizon UI Dashboard'}
+                logoText={'DonGalleto'}
                 brandText={getActiveRoute(routes)}
                 secondary={getActiveNavbar(routes)}
                 message={getActiveNavbarText(routes)}

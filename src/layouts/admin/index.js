@@ -116,6 +116,7 @@ export default function Dashboard(props) {
         >
           <Sidebar routes={routes} display="none" {...rest} />
           <Box
+            bg="#F7F1EF"
             float="right"
             minHeight="100vh"
             height="100%"
@@ -133,7 +134,7 @@ export default function Dashboard(props) {
               <Box>
                 <Navbar
                   onOpen={onOpen}
-                  logoText={'Horizon UI Dashboard PRO'}
+                  logoText={'logo'}
                   brandText={getActiveRoute(routes)}
                   secondary={getActiveNavbar(routes)}
                   message={getActiveNavbarText(routes)}

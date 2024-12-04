@@ -34,7 +34,7 @@ function Sidebar(props) {
     "unset"
   );
   // Chakra Color Mode
-  let sidebarBg = useColorModeValue("white", "navy.800");
+  let sidebarBg = useColorModeValue("#A27068");
   let sidebarMargins = "0px";
 
   // SIDEBAR
@@ -63,8 +63,8 @@ function Sidebar(props) {
 
 // FUNCTIONS
 export function SidebarResponsive(props) {
-  let sidebarBackgroundColor = useColorModeValue("white", "navy.800");
-  let menuColor = useColorModeValue("gray.400", "white");
+  let sidebarBackgroundColor = useColorModeValue("#A27068");
+  let menuColor = useColorModeValue("white");
   // // SIDEBAR
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
@@ -92,7 +92,7 @@ export function SidebarResponsive(props) {
         placement={document.documentElement.dir === "rtl" ? "right" : "left"}
         finalFocusRef={btnRef}>
         <DrawerOverlay />
-        <DrawerContent w='285px' maxW='285px' bg={sidebarBackgroundColor}>
+        <DrawerContent w='285px' maxW='285px' bg={sidebarBackgroundColor} >
           <DrawerCloseButton
             zIndex='3'
             onClose={onClose}
