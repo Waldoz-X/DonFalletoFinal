@@ -1,13 +1,30 @@
 import React from 'react';
 
 import { Icon } from '@chakra-ui/react';
+
+
 import {
   MdBarChart,
   MdPerson,
   MdHome,
-  MdLock,
   MdOutlineShoppingCart,
+  MdPadding,
+  MdComputer,
+  
 } from 'react-icons/md';
+
+import { MdProveedores,
+  MdInicio,
+  MdUsuarios, 
+  MdPuntoDeVenta,
+  MdProductos,
+  MdInsumos,
+  MdProduccion,
+  MdStockProductos,
+  MdCorteDeCaja,
+  MdHistorialVentas
+} from 'assets/Icons/Components/CustomIcons'; 
+
 
 // Admin Imports
 import MainDashboard from 'views/admin/default';
@@ -16,60 +33,103 @@ import Profile from 'views/admin/profile';
 import DataTables from 'views/admin/dataTables';
 import RTL from 'views/admin/rtl';
 
-// Auth Imports
-import SignInCentered from 'views/auth/signIn';
+import Proveedores from 'views/admin/proveedores'
+import PuntoVenta from 'views/admin/puntoVenta'
+import Productos from 'views/admin/productos'
+import Insumos from 'views/admin/insumos'
+import Produccion from 'views/admin/produccion'
+import StockProductos from 'views/admin/stockProductos'
+import CorteDeCaja from 'views/admin/corteDeCaja'
+import HistorialDeVentas from 'views/admin/historialDeVentas'
+
 
 const routes = [
   {
-    name: 'Main Dashboard',
+    name: 'Inicio',
     layout: '/admin',
     path: '/default',
-    icon: <Icon as={MdHome} width="20px" height="20px" color="inherit" />,
+    icon: <Icon as={MdInicio} width="20px" height="20px" color="inherit" />,
     component: <MainDashboard />,
   },
+
+
   {
-    name: 'NFT Marketplace',
+    name: 'Proveedores',
     layout: '/admin',
-    path: '/nft-marketplace',
+    path: '/proveedores',
     icon: (
       <Icon
-        as={MdOutlineShoppingCart}
+       as={MdProveedores}
         width="20px"
         height="20px"
         color="inherit"
       />
     ),
-    component: <NFTMarketplace />,
-    secondary: true,
+    component: <Proveedores />,
   },
+
   {
-    name: 'Data Tables',
+    name: 'Usuarios',
     layout: '/admin',
-    icon: <Icon as={MdBarChart} width="20px" height="20px" color="inherit" />,
-    path: '/data-tables',
-    component: <DataTables />,
-  },
-  {
-    name: 'Profile',
-    layout: '/admin',
-    path: '/profile',
-    icon: <Icon as={MdPerson} width="20px" height="20px" color="inherit" />,
+    path: '/usuarios',
+    icon: <Icon as={MdUsuarios} width="20px" height="20px" color="inherit" />,
     component: <Profile />,
   },
+
   {
-    name: 'Sign In',
-    layout: '/auth',
-    path: '/sign-in',
-    icon: <Icon as={MdLock} width="20px" height="20px" color="inherit" />,
-    component: <SignInCentered />,
+    name: 'Punto de Venta',
+    layout: '/admin',
+    path: '/puntoventa',
+    icon: <Icon as={MdPuntoDeVenta} width="22px" height="22px" color="inherit" />,
+    component: <PuntoVenta/>,
+  },
+
+  {
+    name: 'Productos',
+    layout: '/admin',
+    path: '/productos',
+    icon: <Icon as={MdProductos} width="22px" height="22px" color="inherit" />,
+    component: <Productos/>,
+  },
+
+  {
+    name: 'Insumos',
+    layout: '/admin',
+    path: '/insumos',
+    icon: <Icon as={MdInsumos} width="22px" height="22px" color="inherit" />,
+    component: <Insumos/>,
+  },
+
+  {
+    name: 'Producción',
+    layout: '/admin',
+    path: '/produccion',
+    icon: <Icon as={MdProduccion} width="22px" height="22px" color="inherit" />,
+    component: <Produccion/>,
   },
   {
-    name: 'RTL Admin',
-    layout: '/rtl',
-    path: '/rtl-default',
-    icon: <Icon as={MdHome} width="20px" height="20px" color="inherit" />,
-    component: <RTL />,
+    name: 'Stock Productos',
+    layout: '/admin',
+    path: '/stockproductos',
+    icon: <Icon as={MdStockProductos} width="22px" height="22px" color="inherit" />,
+    component: <StockProductos/>,
   },
+  {
+    name: 'Corte de caja',
+    layout: '/admin',
+    path: '/cortedecaja',
+    icon: <Icon as={MdCorteDeCaja} width="22px" height="22px" color="inherit" />,
+    component: <CorteDeCaja/>,
+  },
+  {
+    name: 'Historial de ventas',
+    layout: '/admin',
+    path: '/historialventas',
+    icon: <Icon as={MdHistorialVentas} width="22px" height="22px" color="inherit" />,
+    component: <HistorialDeVentas/>,
+  }
+
+
 ];
 
 export default routes;
