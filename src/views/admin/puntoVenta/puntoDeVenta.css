@@ -1,0 +1,10 @@
+
+.radio-button {
+    background-color: #e2e8f0; /* gris claro */
+  }
+  
+  .radio-button:checked {
+    background-color: #3182ce; /* azul */
+    color: white;
+  }
+  
